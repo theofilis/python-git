@@ -35,8 +35,5 @@ if add_files:
     msg = '%s' % datetime.now().isoformat()
     print repo.index.commit(msg, author=author, committer=committer)
 
-
-    # repo.head.set_tracking_branch(origin.refs.master)
-    # origin.push()
-
+# SWAG
 repo.remotes.origin.push(repo.head)
