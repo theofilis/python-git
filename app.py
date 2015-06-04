@@ -24,9 +24,8 @@ index = repo.index
 add_files = [] + repo.untracked_files
 
 for u_file in repo.index.diff(None):
-        add_files.append(u_file)
+        add_files.append(u_file.b_path)
 
-origin.fetch()
 if add_files:
     index.add(add_files)
 
@@ -39,3 +38,5 @@ if add_files:
 
     # repo.head.set_tracking_branch(origin.refs.master)
     # origin.push()
+
+print repo.head.ref == repo.heads.master
