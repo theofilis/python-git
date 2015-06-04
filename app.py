@@ -29,8 +29,8 @@ for u_file in repo.index.diff(None):
 if add_files:
     index.add(add_files)
 
-    author = Actor("Service SWAG", "service@swag.com")
-    committer = Actor("George Theofilis", "theofilis.g@gmail.com")
+    committer = Actor("Service SWAG", "service@swag.com")
+    author = Actor("George Theofilis", "theofilis.g@gmail.com")
 
     msg = '%s' % datetime.now().isoformat()
     print repo.index.commit(msg, author=author, committer=committer)
