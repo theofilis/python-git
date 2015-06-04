@@ -39,4 +39,4 @@ if add_files:
     # repo.head.set_tracking_branch(origin.refs.master)
     # origin.push()
 
-print repo.head.ref == repo.heads.master
+print repo.head.master
